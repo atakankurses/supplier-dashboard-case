@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const luxon = require('luxon');
 
 exports.getOrders = async (req, res) => {
-    const orders = await Order.find();
+    const orders = await Order.find().limit(20);
 
     res.send(order);
 };
